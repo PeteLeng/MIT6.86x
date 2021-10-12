@@ -52,7 +52,7 @@ def factorization(observed_matrix, reg_coeff, factor_matrix=None, rank=None, dir
             direction = 1
             multiple_matrix = symbolic_matrix([n_row, factor_row])
         else:
-            print('Dimension of factor matrix does not fit observed matrix')
+            raise ValueError('Dimension of factor matrix does not fit observed matrix')
     elif rank is not None and direction is not None:
         if direction:
             factor_matrix = np.ones([rank, n_col])
